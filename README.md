@@ -46,10 +46,3 @@ This is a simple machine learning web app built using **Streamlit** that classif
 
 ---
 
-## ▶️ How to Run
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/spam-classifier
-   cd spam-classifier
-
