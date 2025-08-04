@@ -15,20 +15,27 @@ st.markdown("<h1 style='text-align: center;'>📧 Email/SMS Spam Classifier</h1>
 st.markdown("<p style='text-align: center;'>Paste or write your message below to check whether it's spam or not.</p>", unsafe_allow_html=True)
 
 # --- Text Input ---
-st.set_page_config(page_title="Spam or Not?", page_icon="🎯", layout="centered")
+message = st.text_area("Enter your message:")
 
-st.markdown("""
-    <h1 style='color: #FF4B4B; text-align: center;'>🚨 Spam Detector 3000 🚨</h1>
-    <p style='text-align:center; font-size:18px;'>Find out if your message is a scam in disguise!</p>
-""", unsafe_allow_html=True)
+# --- Predict Button ---
+if st.button("✅ Check Spam"):
+    if message.strip() == "":
+        st.warning("Please enter a message first.")
+    else:
+        prediction = model.predict([message])[0]
 
-st.markdown("#### 📝 Your Message")
-message = st.text_area("", height=120, placeholder="Write your message here...")
+        if prediction == 1:
+            st.error("🚫 This message is **SPAM**")
+        else:
+            st.success("✅ This message is **NOT SPAM**")
 
-if st.button("🔍 Check Now"):
-    st.error("⚠️ Spam Detected!")  # Replace with real prediction
-
+# --- Footer ---
 st.markdown("---")
-st.info("🎉 Try out various messages to test our spam detector!")
+st.markdown("### 🙌 Thank You for Using the Spam Classifier App!")
+st.markdown("""
+- 🔍 Built with **Python + Streamlit**  
+- 📦 Model trained using **Scikit-learn**  
+- 💻 Developed during internship at **Arch Technologies**
 
-
+<small>This tool helps classify messages as SPAM or NOT SPAM using machine learning.</small>
+""", unsafe_allow_html=True)
