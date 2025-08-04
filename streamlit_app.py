@@ -35,7 +35,7 @@ st.markdown("### 🙌 Thank You for Using the Spam Classifier App!")
 st.markdown("""
 - 🔍 Built with **Python + Streamlit**  
 - 📦 Model trained using **Scikit-learn**  
-- 💻 Developed during internship at **Arch Technologies**
 
 <small>This tool helps classify messages as SPAM or NOT SPAM using machine learning.</small>
 """, unsafe_allow_html=True)
+
