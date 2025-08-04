@@ -21,7 +21,7 @@ This is a simple machine learning web app built using **Streamlit** that classif
 | scikit-learn | Machine learning library for model training      |
 | Streamlit    | Web-based GUI framework                          |
 | Joblib       | For saving and loading the trained model         |
-| UCI Dataset  | Public dataset with labeled spam/ham messages    |
+| Kaggle Dataset  | Public dataset with labeled spam/ham messages    |
 
 ---
 
